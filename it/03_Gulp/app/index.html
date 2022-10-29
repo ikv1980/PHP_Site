@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Создание веб сайта</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header class="container-fluid p-3 my-3 my-sm-5 justify-content-between align-self-center row">
+        <div class="col-md-12 col-xl-4 row align-items-center">
+            <div class="col-auto nopadding"><a href="/"><img src="media/logo.png" alt="logo" width="100%"></a></div>
+            <div class="col-auto h1" >itProger<span><br>Blog</span></div>   
+        </div>
+        <div class="col-md-12 col-xl-3 align-self-center pe-3 my-3 my-xl-0 nopadding">
+            <input class="form-control px-3 py-2 align-items-end" type="search" placeholder="Поиск" autocomplete="off" id="text" data-toggle="modal" data-target="#myModal" readonly>
+        </div>
+        <div class="col-md-12 col-xl-auto align-self-center text-end nopadding">
+            <a href="/" class="btn btn-outline-secondary py-2 px-2 px-sm-3 fw-semibold"><span class="h5">Главная</span></a>
+            <a href="#" class="btn btn-outline-secondary py-2 px-2 px-sm-3 fw-semibold"><span class="h5">Статьи</span></a>
+            <a href="#" class="btn btn-outline-secondary py-2 px-2 px-sm-3 fw-semibold"><span class="h5">Контакты</span></a>
+        </div>
+    </header>
+
+    <section class="container-fluid p-2 p-md-3 p-xl-5 mb-4 row">
+        <div class="col-12 col-lg-6">
+            <h1 class="display-3 fw-normal text-white mb-3 mb-lg-4">3 основные сферы применения языка Python</h1>
+            <p class="h3 fw-light text-white mb-3 mb-lg-4">До начала активного изучения любого языка программирования правильно
+            было бы задуматься о сферах его применения. Мы расскажем про 3 самые 
+            популярные сферыприменения языка Python.</p>
+            <button type="button" class="btn btn-danger p-2 fw-semibold mb-3 mb-lg-4"><span class="h5">Читать далее</span></button>
+        </div>
+        <div class="col-12 col-lg-6 mb-2">
+            <img src="media/rust.webp" alt="">
+        </div>
+    </section>
+
+    <main class="container-fluid justify-content-around align-self-center row nopadding">
+        <div class="col-12 col-xxl-8">
+            <h2 class="h1 ps-4 m-0">Новости</h2>
+            <div id="news" class="row row-cols-md-2 justify-content-around">
+                <!-- Тут будут подгружаться новости -->
+            </div>
+            <div class="text-center">
+                <button id="add" class="btn btn-success fw-semibold m-4" style="width: fit-content;"><span class="h5">Подгрузить больше</span></button>
+            </div>
+        </div>
+        <aside class="col-12 col-xxl-4">
+            <h2 class="h1 m-0">Анонсы</h2>
+            <div class="card p-3 mb-3 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem natus reprehenderit ullam, in dignissimos ab at iusto a accusantium obcaecati porro ipsa odio. Labore facilis in nam delectus vitae!</div>
+            <div class="card mb-5">
+                <img class="card-img-top" src="https://itproger.com/img/news/1546853933.jpg" alt="Lorem ipsum dolor sit amet" title="Lorem ipsum dolor sit amet">
+                <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem natus reprehenderit ullam, in dignissimos ab at iusto a accusantium obcaecati porro ipsa odio. Labore facilis in nam delectus vitae!</p>
+                <a href="#" class="btn btn btn-light fw-semibold">Читать далее</a>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="container-fluid p-4 text-center">
+            <p class="h5">Все права защищены &#169 </p>
+    </footer>
+
+    <div class="modal fade bd-example-modal-lg" id="myModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="modal-title h2 mb-4">Форма поиска</h4>
+                <input class="form-control px-3 py-2 align-items-end" type="search" name="input" id="text_modal" placeholder="Поиск" autocomplete="off" autofocus="autofocus">
+                <div class="justify-content-start">
+                    <button type="button" class="btn btn-danger mt-4" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

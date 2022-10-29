@@ -1,0 +1,85 @@
+@import "mixins";
+@import "vars";
+
+.container-fluid {width: 80%; margin: auto;}
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: $bgColor;
+    font-size: 1rem !important;
+    header {
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        background-color: white;
+        border-radius: 10px;
+        div {
+            // .form-control {width: 75%;}
+            .btn {background-color: #F0EEF0;} 
+            span {color: $BordColor;}
+            img {
+                border-radius: 50%;
+                width: 100px;
+                border: 3px solid $BordColor;
+                padding: 2px;
+                transition: all 1s ease;
+                background-color: #CA453E;
+                &:hover {transform: rotate(360deg)}
+            }
+            // Поле инпут не активно, но цвет пусть остается белым :)
+            input:read-only {background-color:white !important;}
+        }
+    };
+
+    section {
+        background-color: $BordColor;
+        border-radius: 10px;
+        border: 3px solid #5e2323;
+        img {
+            border: 8px solid white;
+            border-radius: 5px;
+            max-width:100%;
+        }
+    };
+
+    aside .card:last-child  {
+        background-color: #1597AC;
+        color: white;
+    }
+
+    footer {
+        background-color: white;
+        border: 2px solid #d6d5d5;
+        border-bottom: 0px;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0px -5px 5px -5px #223c5033;
+    }
+
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.modal {
+    background-color: #c9c9c9c1;
+    .modal-dialog-centered {
+        margin-top: -15%;
+        .modal-content {
+            background: transparent; 
+            border: 0px;
+            h4 {color: #681616;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container-fluid {width: 98%; margin: auto;}
+    .display-3 {font-size: 6vw; font-weight:600!important}
+    .h3 {font-size: 4vw !important;}
+}
+
+@media (max-width: 992px) {
+    .h3 {font-size: 3vw;}    
+}

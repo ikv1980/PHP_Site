@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {overflow: scroll;}
+
+.container {
+    height: 40vw;
+    margin: 2% 10%;
+    background: #ECEAEC;
+    border: 1px solid #D2D0D2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.square_01, .square_02, .square_03, .square_04 {
+    width: 17vw;
+    height: 17vw;
+}
+/* - - - - - - - - - - - - square_01 - - - - - - - - - - - - */
+.square_01 {
+    background: linear-gradient(#1e76b4, #614569);
+    align-self: flex-start;
+    z-index: 0;
+    transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+}
+.square_01:hover {
+transform: translateX(68%) translateY(68%);
+}
+/* - - - - - - - - - - - - square_02 - - - - - - - - - - - - */
+.square_02 {
+    background: linear-gradient(#4C5481, #8E2538);
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+.square_02:hover {
+    background: linear-gradient(#1e76b4, #b9070a);
+    height: 100%;
+}
+
+/* - - - - - - - - - - - - square_03 - - - - - - - - - - - - */
+.square_03, #id031, #id032  {position: relative;}
+
+img {
+    width: 100%;
+}
+
+#id031 {
+    background: linear-gradient(#4C5481, #8E2538);
+    z-index: 2;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+#id032 {
+    background: white;
+    z-index: 3;
+    height: 0%;
+    width: 0%;
+    top: -50%;
+    left: 50%;
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.square_03:hover #id031 {
+    border-radius: 50%;
+    box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.5);
+    -o-box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.5);
+    -moz-box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.5);
+    -webkit-box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.5);
+}
+
+.square_03:hover #id032  {
+    border-radius: 50%;
+    display: block;
+    height: 50%;
+    width: 50%;
+    top: -75%;
+    left: 25%;
+    box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.5);
+    -webkit-box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.5) inset;
+    -moz-box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.5) inset;
+    box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.5) inset;
+}
+
+/* - - - - - - - - - - - - square_04 - - - - - - - - - - - - */
+.square_04 {
+    background: linear-gradient(#7A334E, #b9070a);
+    align-self: flex-end;
+    transform-origin:20% 20%;
+    transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+
+}
+
+.square_04:hover {
+    transform: scale(1.25, 1.25) rotate(40deg);
+}

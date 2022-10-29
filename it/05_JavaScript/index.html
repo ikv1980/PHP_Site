@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Домашнее задание по теме: #13 – JavaScript + HTML">
+    <meta name="autdor" content="Konstantin Ivanov">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>#13 – JavaScript + HTML</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+  <body>
+    <div class="container">
+        <p class="pt-3 mt-4 alert alert-primary">
+            <b>ЗАДАЧА #1</b><br>
+            Создайте переменную со значением 8. Создайте программу, что будет просить пользователя ввести число из всплывающего окна и сверять это число с числом в переменной. До тех пор, пока пользователь не введет число 8.<br>
+            <i><b>Дополнительно</b></i>: Угадайте число, находящееся в промежутке от 0 до 50.
+        </p>
+        <div class="row py-2">
+            <div id="task_11_div" class="col p-2">
+                <p class="bord p-2 notask">Угадать первое число</p>
+                <button type="button" class="btn btn-primary">Выполнить задание</button>
+            </div>
+            <div id="task_12_div" class="col p-2">
+                <p class="bord p-2 notask">Угадать второе число</p>
+                <button type="button" class="btn btn-primary">Выполнить задание</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <p class="pt-3 mt-4 alert alert-success">
+            <b>ЗАДАЧА #2</b><br>
+            Напишите программу на JavaScript, которая будет получать ширину и высоту окна. Каждый раз, когда размер окна будет менятся в консоль или на страницу сайта должна выводиться новая информация про размеры окна.  
+        </p>
+        <div id="task_2_div" class="col p-2">
+            <p class="bord p-2 text-success fw-semibold">Заглушка</p>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <p class="pt-3 mt-4 alert alert-danger">
+            <b>ЗАДАЧА #3</b><br>
+            Напишите программу на JavaScript, которая найдет все жирные слова в абзаце, что представлен ниже. Жирные слова должны становиться красного цвета при наведении на АБЗАЦ.<br>
+            <i><b>Дополнительно</b></i>: Во втором варианте жирные слова меняют цвет при наведении на СЛОВО.
+        </p>
+        <div class="row py-2">
+            <div id="task_31_div" class="col p-2">
+                <p class="bord p-2">Простой <b>пример</b> небольшого текста, в <b>котором</b> есть выделенные <b>жирным</b> слова.</p>
+            </div>
+            <div id="task_32_div" class="col p-2">
+                <p class="bord p-2">Простой <b>пример</b> небольшого текста, в <b>котором</b> есть выделенные <b>жирным</b> слова.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <p class="pt-3 mt-4 alert alert-warning">
+            <b>ЗАДАЧА #4</b><br>
+            Ниже пример HTML-файла с кнопкой отправки. Напишите функцию JavaScript, что получит значения атрибутов href, hreflang, rel, target и type указанной ссылки.
+        </p>
+        <div id="task_4_div" class="col p-2">
+            <p class="bord p-2 text-secondary fw-semibold">
+                <a id="link" type="text/html" hreflang="ru-ru" rel="nofollow" target="_self" href="https://itproger.com/">itProger</a>
+            </p>
+            <div class="bord p-2 mb-3 notask">Данные по атрибутам отсутствуют</div>
+            <button type="button" class="btn btn-secondary">Получить все атрибуты</button>
+        </div>
+    </div>
+  <script src="js/main.js"></script>
+  </body> 
+</html>

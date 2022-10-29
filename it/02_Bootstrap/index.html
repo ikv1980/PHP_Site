@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Домашнее задание по теме: #10 – Фреймворк Bootstrap">
+    <meta name="autdor" content="Konstantin Ivanov">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>#10 – Фреймворк Bootstrap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid"> <!-- container-fluid на 100 %  -->
+        <div class="row bg_t align-items-center text-center">
+            <div>
+                <h1 class="fw-semibold text-light display-1">Крутое портфолио</h1>
+                <h4 class="fst-italic fw-semibold text-light my-3">Найдите интересные материалы для себя</h4>
+                <!-- Кнопка видна после 576px -->
+                <div class="block d-none d-sm-block">
+                    <button class="btn btn-danger btn-lg my-5" data-bs-toggle="modal" data-bs-target="#modal-window">Найти больше</button>
+                </div>
+                <!-- Кнопка видна до 576px -->
+                <div class="block d-sm-none d-block">
+                    <button class="btn btn-danger btn-lg my-5" data-bs-toggle="modal" data-bs-target="#modal-window" disabled>Найти больше</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg align-items-center text-center">
+            <div class="row bg-light align-items-center py-sm-5">
+                <div>
+                    <h2 class="fw-semibold mt-5">Множество крутых проектов для вас и вашей команды!</h2>
+                    <h4 class="fw-semibold my-4 text-muted">Отличные простые и стильные проекты, которые подойдут как для небольшого сайта, так и для крупной компании!</h5>
+                    <button class="btn btn-dark btn-lg my-5 ">Что мы предлагаем</button> 
+                </div>
+            </div>
+            <div class="row bg-danger align-items-center py-sm-5">
+                <div>
+                    <p class="fw-semibold h2 text-uppercase mt-5">Услуги</p>
+                    <p class="fw-semibold display-4 text-light pb-5">Что мы предлагаем</p>
+                    <div class="row justify-content-xl-center d-flex text-light mb-5">
+                        <div class="col-md-3 col-xl-2 px-3 shad">
+                            <p class="fw-bold h3">Готовый код</p>
+                            <p class="lead">Можно встраивать в свои проекты</p>
+                        </div>
+                        <div class="col-md-3 col-xl-2 px-3 shad">
+                            <p class="fw-bold h3">Легко переделать</p>
+                            <p class="lead">Легкий и удобный код, который легко переписать</p>
+                        </div>
+                        <div class="col-md-3 col-xl-2 px-3 shad">
+                            <p class="fw-bold h3">Помощь</p>
+                            <p class="lead">Поддержка и помощь при работе с сервисом</p>
+                        </div>
+                        <div class="col-md-3 col-xl-2 px-3 shad">
+                            <p class="fw-bold h3">Качество</p>
+                            <p class="lead">Качественные работы по низким ценам</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row bg_b align-items-center text-center text-light">
+            <div>
+                <h2 class="fw-semibold display-3">Ваш новый веб <br> сайт!</h2>
+
+                <button class="btn btn-danger btn-lg mt-5">Начать работать!</button>
+            </div>
+        </div>
+    </div>
+    <!-- Модальное окно для просмотра сайта в мобильной версии -->
+    <div class="modal fade" id="modal-window" tabindex="-1" role="dialog" aria-labelledby="modal-window-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" style="width: 340px;" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-window-label">320х480</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <iframe width="320" height="480" src="index.html" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="card-body">
+                      <h5 class="card-title">Мобильная версия сайта</h5>
+                      <p class="card-text">Кнопка [Найти больше] заблокирована. </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js.map"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
