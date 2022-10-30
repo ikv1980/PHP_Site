@@ -31,7 +31,7 @@
 
             <label for="password">Пароль</label>
             <input type="password" name="password" id="password" autocomplete="off">
-            <!-- !!!ikv1980: повторный ввод для пароля -->
+            <!-- ikv1980: повторный ввод для пароля -->
 
             <div class="error-mess" id="error-block"></div>
             <button type="button" id="reg_user">Зарегистрироваться</button>

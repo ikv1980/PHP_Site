@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
@@ -9,6 +9,7 @@ body {
     background: #eee;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    min-height: 100%;
 }
 
 header {
@@ -42,11 +43,12 @@ header nav a.btn {
     padding: 10px 5px;
     border: 1px solid silver;
     border-radius: 5px;
+    background-color: #4476D6;
 }
 
 header nav a:hover, 
 header .logo a:hover {
-    color: #a1a1a1;
+    color: #ffe082;
 }
 
 header .logo a:hover {
@@ -61,7 +63,7 @@ main {
     float: left;
     margin-top: 50px;
     margin-left: 100px;
-    width: 50%;
+    width: 60%;
 }
 
 .user {
@@ -101,11 +103,54 @@ aside img {
     border: 5px solid #fff;
     box-sizing: border-box;
     border-radius: 5px;
-    margin-top: 30px;
+    margin: 15px 0;
 }
 
+.chat {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    background-color: #F4F1EB;
+    box-shadow: 3px 3px 3px -3px rgb(34 60 80 / 60%) inset;
+    padding: 5px;
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chat p {font-weight: 400;}
+
+.chat b {
+    color: blue;
+    font-weight: 600;
+}
+
+.chat span {
+    display: block;
+    text-align: end;
+    font-size: 12px;
+}
+
+.owner, .other {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    box-shadow: 0 -0.5px 1.5px rgb(34 60 80 / 60%) inset;
+}
+
+.owner {
+    background-color: #D9FDD3;
+    align-self: start;
+}
+
+
+
+
+
 form {
-    margin: 30px 0;
+    margin: 15px 0;
 }
 
 form label {
@@ -115,17 +160,21 @@ form label {
     cursor: pointer;
 }
 
-form input {
+form input,
+form textarea {
     width: 100%;
+    resize: vertical;
     border: 1px solid silver;
     border-radius: 5px;
+    box-sizing: border-box;
     padding: 10px 15px;
     font-size: 15px;
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 
-form input:focus {
+form input:focus,
+form textarea:focus{
     border-color: #86b7fe;
     background-color: #e0edff9d;
     outline: 0;
@@ -133,7 +182,7 @@ form input:focus {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
-form button, .user button {
+form button, .user button, .post_flex button {
     font-size: 20px;
     border: 0;
     padding: 10px 20px;
@@ -161,11 +210,68 @@ form button:active,
     display: none;
 }
 
+.post_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.post {
+    margin-bottom: 50px;
+    width: 45%;
+    box-shadow: 0 5px 10px 2px rgb(34 60 80 / 20%);
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.post img{
+    width: 100%;
+}
+
+.post h1 {
+    margin-bottom: 10px;
+}
+
+.post .avtor {
+    font-weight: 600;
+}
+
+.post .avtor span {
+    background: #b7b7b7;
+    padding: 2px 7px;
+    font-weight: 300;
+    border-radius: 2px;
+}
+
+.post a {
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #fec008;
+    color: #42410c;
+    transition: transform 500ms ease;
+}
+
+.comment {
+    width: 100%;
+    background: #F5DEB3;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #42410c;
+    margin-bottom: 15px;
+}
+
 .error {display: block;}
 
+
 footer {
-    position: absolute;
-    bottom: 0;
+    /* position: relative; */
+    /* bottom: 0; */
     float: left;
     width: 100%;
     box-sizing: border-box;

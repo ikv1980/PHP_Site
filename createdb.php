@@ -31,13 +31,13 @@
         // Получение и прверка введенных данных
         if (isset($_GET['dbname'])) {
             $dbname = $_GET['dbname']; //получаем имя БД (можно и с дефисом)
-            $conn = new PDO('mysql:host='.$host.';port='.$port, $user, $password);
-            $conn->exec('set names utf8mb4'); //Чтобы не было кракозябр (знаков вопроса)
+            $pdo = new PDO('mysql:host='.$host.';port='.$port, $user, $password);
+            $pdo->exec('set names utf8mb4'); //Чтобы не было кракозябр (знаков вопроса)
             $sql = 'CREATE DATABASE IF NOT EXISTS `'.$dbname.'`';
-            $conn->exec($sql);
+            $pdo->exec($sql);
             echo 'База данных с именем <b><a href="http://localhost:81/phpMyAdmin" target="_blank">'.$dbname.'</a></b> успешно создана!<br>';
             if(isset($_GET['fulldb'])) {
-                $conn = new PDO('mysql:host='.$host.';dbname='.$dbname, $user, $password);
+                $pdo = new PDO('mysql:host='.$host.';dbname='.$dbname, $user, $password);
                 // Запрсы SQL для существующей БД
                 $sql = "
                     SET SQL_MODE = 'NO_AUTO_VALUE_ON_ZERO';
@@ -61,7 +61,7 @@
                         `anons` varchar(250) NOT NULL,
                         `full_text` text NOT NULL,
                         `date` varchar(50) NOT NULL,
-                        `avtor` varchar(30) NOT NULL,
+                        `avtor` varchar(20) NOT NULL,
                         PRIMARY KEY (`id`)
                         ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -72,9 +72,17 @@
                         `article_id` int(11) UNSIGNED NOT NULL,
                         PRIMARY KEY (`id`)
                         ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+                    CREATE TABLE IF NOT EXISTS `chat` (
+                        `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+                        `name` varchar(20) NOT NULL,
+                        `message` varchar(500) NOT NULL,
+                        `date` varchar(50) NOT NULL,
+                        PRIMARY KEY (`id`)
+                        ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
                 ";     
 
-                $conn->exec($sql);
+                $pdo->exec($sql);
                 echo "<br><span class='text-primary'>Данные успешно добавлены в базу данных <b>".$dbname."</b>!</span>";
             };
         };

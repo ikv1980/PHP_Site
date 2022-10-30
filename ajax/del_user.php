@@ -3,7 +3,7 @@ $id = $_POST['id'];
 $login = $_POST['login'];
 
 $error = '';
-if ($login == $_COOKIE['log']) {
+if ($login == $_COOKIE['login']) {
     $error = 'Нельзя удалить самого себя!';
 }
 if ($error != '') {

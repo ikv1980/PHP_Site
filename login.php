@@ -12,8 +12,8 @@
     <?php require "blocks/header.php" ?>
 
     <main>
-        <!-- // Проверка наличия в coockie перменной log. Если она есть, значит пользователь авторизован -->
-        <?php if (!isset($_COOKIE['log'])) : ?>
+        <!-- // Проверка наличия в coockie перменной login. Если она есть, значит пользователь авторизован -->
+        <?php if (!isset($_COOKIE['login'])) : ?>
             <h1>Авторизация</h1>
             <form>
                 <label for="login">Логин</label>
@@ -29,7 +29,7 @@
         
         <?php else : ?>
             <!-- ikv1980: Можно тут создать форму для того, чтобы пользователь мог описать о себе поподробнее -->
-            <h2>Пользователь <?= $_COOKIE['log'] ?> - авторизован</h2>
+            <h2>Пользователь <?= $_COOKIE['login'] ?> - авторизован</h2>
             <form>
                 <button type="button" id="exit_user" style="background-color: #FC4632;">Выйти</button>
             </form>

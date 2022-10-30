@@ -15,7 +15,7 @@
     <main>
         <h1>Список пользователей</h1>
         <!-- Получаем и выводим список всех пользователей из БД -->
-        <?php if (isset($_COOKIE['log'])) : ?>
+        <?php if (isset($_COOKIE['login'])) : ?>
         <?php 
             require "lib/mysql.php";
             $sql = 'SELECT * FROM users';   //sql-запрос
